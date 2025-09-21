@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath India - Professional Career Counselling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">CareerPath India 🚀</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#careers">Career Paths</a></li>
+                <li><a href="#assessment">Assessment</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Shape Your Future Career</h1>
+                <p>Expert career guidance tailored for Indian students and professionals.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="startAssessment()">Take Free Assessment</button>
+                    <button class="btn btn-secondary" onclick="showModal('schedule')">Book Counselling</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero.svg" alt="Career Guidance Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive career guidance solutions for every stage of your journey</p>
+        <div class="services-grid">
+            <div class="service-card" onclick="showModal('service1')">
+                <div class="service-icon">📚</div>
+                <h3>Stream Selection</h3>
+                <p>Guidance for choosing the right stream after 10th - Science, Commerce, Arts.</p>
+            </div>
+            <div class="service-card" onclick="showModal('service2')">
+                <div class="service-icon">🎯</div>
+                <h3>Entrance Exam Prep</h3>
+                <p>Preparation guidance for JEE, NEET, CAT, UPSC, etc.</p>
+            </div>
+            <div class="service-card" onclick="showModal('service3')">
+                <div class="service-icon">🏫</div>
+                <h3>College Selection</h3>
+                <p>Find best colleges & universities in India with admission guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Paths Section -->
+    <section class="career-paths" id="careers">
+        <h2 class="section-title">Popular Career Paths</h2>
+        <p class="section-subtitle">Explore trending career options</p>
+        <div class="paths-container">
+            <div class="path-card" onclick="showCareerDetails('engineering')">
+                <div class="path-icon">⚙️</div>
+                <h3>Engineering</h3>
+                <p>IITs, NITs, Software, AI/ML</p>
+            </div>
+            <div class="path-card" onclick="showCareerDetails('medical')">
+                <div class="path-icon">🏥</div>
+                <h3>Medical</h3>
+                <p>MBBS, BDS, Nursing</p>
+            </div>
+            <div class="path-card" onclick="showCareerDetails('management')">
+                <div class="path-icon">📊</div>
+                <h3>Management</h3>
+                <p>MBA, Finance, Marketing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment Section -->
+    <section class="assessment" id="assessment">
+        <h2 class="section-title">Career Assessment Test</h2>
+        <p class="section-subtitle">Discover your strengths and ideal career path</p>
+        <div class="assessment-container">
+            <div id="startScreen" class="quiz-container active">
+                <h3>Free Career Aptitude Test</h3>
+                <p>This quick assessment helps you understand your strengths and suitable career options.</p>
+                <button class="btn btn-primary" onclick="startAssessment()">Start Assessment</button>
+            </div>
+            <div id="quizScreen" class="quiz-container"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">Success Stories</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial-track">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">CareerPath India helped me crack JEE with top rank!</p>
+                    <p class="testimonial-author">— Rohan K.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">I got admission in my dream college thanks to their guidance.</p>
+                    <p class="testimonial-author">— Priya S.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Email: info@careerpathindia.com</p>
+                <p>Phone: +91-1234567890</p>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modalContainer"></div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
